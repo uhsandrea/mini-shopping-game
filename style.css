@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(122, 179, 136);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.logo {
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.logo:active {
+  transform: scale(0.9);
+}
+
+.btns {
+  min-width: 450px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+button:active {
+  transform: scale(0.8);
+}
+
+.btn.clothes {
+  background-color: transparent;
+}
+
+.btn.clothes img {
+  width: 65px;
+  height: 65px;
+}
+
+.btn.color {
+  padding: 15px;
+  border-radius: 10%;
+}
+
+.btn.blue {
+  background-color: rgb(35, 133, 245);
+}
+
+.btn.yellow {
+  background-color: rgb(240, 225, 89);
+}
+
+.btn.pink {
+  background-color: rgb(250, 169, 183);
+}
+
+.items {
+  min-width: 450px;
+  height: 60%;
+  overflow: scroll;
+}
+
+.item {
+  list-style: none;
+  background-color: rgb(217, 250, 217);
+  padding: 5px 10px;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.item img {
+  width: 50px;
+  margin-right: 20px;
+}
