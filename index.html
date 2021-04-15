@@ -5,23 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script defer src="main.js"></script>
     <title>Mini Shopping Game</title>
   </head>
   <body>
     <img class="logo" src="images/logo.png" alt="logo" />
     <div class="btns">
-      <button class="btn clothes">
+      <button class="btn clothes" data-key="type" data-value="tshirt">
         <img src="images/blue_t.png" alt="tshirt" />
       </button>
-      <button class="btn clothes">
+      <button class="btn clothes" data-key="type" data-value="pants">
         <img src="images/blue_p.png" alt="pants" />
       </button>
-      <button class="btn clothes">
+      <button class="btn clothes" data-key="type" data-value="skirt">
         <img src="images/blue_s.png" alt="skirt" />
       </button>
-      <button class="btn color blue">Blue</button>
-      <button class="btn color yellow">Yellow</button>
-      <button class="btn color pink">Pink</button>
+      <button class="btn color blue" data-key="color" data-value="blue">
+        Blue
+      </button>
+      <button class="btn color yellow" data-key="color" data-value="yellow">
+        Yellow
+      </button>
+      <button class="btn color pink" data-key="color" data-value="pink">
+        Pink
+      </button>
     </div>
     <ul class="items">
       <li class="item">
