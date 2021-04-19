@@ -1,14 +1,10 @@
+function loadItems() {
+  return fetch('data.json')
+    .then(response => response.json())
+    .then(data => data.items);
+}
 
-
-fetch('data.json')
-  .then(response => response.json())
-  .then(data => data.items)
-  .then(items => 
-    {display(items),
-    clickAndFilter(items)}
-  );
-
-function display(items) {
+function displayItems(items) {
   const container = document.querySelector('.items');
   container.innerHTML = items.map(item => {
     return `
@@ -18,23 +14,24 @@ function display(items) {
     </li>
     `;
   }).join('');
-  
-
 }
 
-function clickAndFilter(items) {
+function filterItems(items) {
   const logo = document.querySelector('.logo');
   const buttons = document.querySelectorAll('.btn');
 
-  logo.addEventListener('click', () => display(items));
+  logo.addEventListener('click', () => displayItems(items));
   buttons.forEach(button => {
     button.addEventListener('click', () => {
       const key = button.dataset.key;
       const value = button.dataset.value;
-      display(items.filter(item => item[key] === value));
+      displayItems(items.filter(item => item[key] === value));
     });
-    
-    
   });
-
 }
+
+loadItems()
+  .then(items => {
+    displayItems(items);
+    filterItems(items);
+  });
