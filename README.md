@@ -1,3 +1,12 @@
-# mini-shopping-game
+# Mini Shopping Game
 
-Mini shopping filtering game with Javascript
+Simple mini-shopping game by fetching JSON data and filtering.
+
+## Built with
+
+HTML, CSS, JavaScript
+
+## Features
+
+- In default, it shows list of all shopping items by fetching JSON data
+- Clicking each button displays filitered items
